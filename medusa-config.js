@@ -1,17 +1,16 @@
+const { loadEnv, defineConfig, Modules } = require('@medusajs/framework/utils');
 
-const { loadEnv, defineConfig, Modules } = require('@medusajs/framework/utils')
-
-loadEnv(process.env.NODE_ENV, process.cwd())
+loadEnv(process.env.NODE_ENV, process.cwd());
 
 module.exports = defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     http: {
-      storeCors: "http://203.161.43.125:9006",
-      adminCors: "http://203.161.43.125:9006",
-      authCors: "http://203.161.43.125:9006",
-      host: '203.161.43.125',                  // Add this line to bind to all interfaces
-
+      storeCors: "*", // Allow all origins
+      adminCors: "*", // Allow all origins
+      authCors: "*",  // Allow all origins
+      host: '0.0.0.0', // Bind to all interfaces
+      port: 9006, // Ensure this is a number
       jwtSecret: process.env.JWT_SECRET || "supersecret",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
@@ -26,7 +25,7 @@ module.exports = defineConfig({
             id: "local",
             options: {
               upload_dir: "uploads",
-              backend_url: 'https://grocer.al-mizan.store'
+              backend_url: 'https://grocer.al-mizan.store',
             },
           },
         ],
@@ -34,5 +33,3 @@ module.exports = defineConfig({
     },
   },
 });
-
-
