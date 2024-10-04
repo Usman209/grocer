@@ -7,8 +7,8 @@ module.exports = defineConfig({
     databaseUrl: process.env.DATABASE_URL,
     http: {
       storeCors: "*", // Allow all origins
-      adminCors: "*", // Allow all origins
-      authCors: "*",  // Allow all origins
+      adminCors: "http://203.161.43.125:9000", // Allow all origins
+      authCors: "http://203.161.43.125:9000",  // Allow all origins
       host: '0.0.0.0', // Bind to all interfaces
       port: 9000, // Ensure this is a number
       jwtSecret: process.env.JWT_SECRET || "supersecret",
