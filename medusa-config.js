@@ -10,7 +10,6 @@ module.exports = defineConfig({
       adminCors: "http://203.161.43.125:9000", // Allow all origins
       authCors: "http://203.161.43.125:9000",  // Allow all origins
       host: '0.0.0.0', // Bind to all interfaces
-      port: 9000, // Ensure this is a number
       jwtSecret: process.env.JWT_SECRET || "supersecret",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
@@ -18,7 +17,7 @@ module.exports = defineConfig({
 
   admin: {
 
-    backendUrl:       "http://203.161.43.125:9000"
+    backendUrl:  "https://grocer.al-mizan.store"
 
 
 
