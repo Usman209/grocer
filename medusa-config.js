@@ -15,6 +15,14 @@ module.exports = defineConfig({
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
   },
+
+  admin: {
+
+    backendUrl:       "http://203.161.43.125:9000"
+
+
+
+  },
   modules: {
     [Modules.FILE]: {
       resolve: "@medusajs/file",
