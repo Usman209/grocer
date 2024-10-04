@@ -10,7 +10,7 @@ module.exports = defineConfig({
       storeCors: "http://203.161.43.125:9006",
       adminCors: "http://203.161.43.125:9006",
       authCors: "http://203.161.43.125:9006",
-      host: '0.0.0.0',                  // Add this line to bind to all interfaces
+      host: '203.161.43.125',                  // Add this line to bind to all interfaces
 
       jwtSecret: process.env.JWT_SECRET || "supersecret",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
