@@ -7,9 +7,10 @@ module.exports = defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     http: {
-      storeCors: "*",  // Allow all origins for store CORS
-      adminCors: "*",  // Allow all origins for admin CORS
-      authCors: "*",   // Allow all origins for auth CORS
+      storeCors: "http://203.161.43.125:9006",
+      adminCors: "http://203.161.43.125:9006",
+      authCors: "http://203.161.43.125:9006",
+
       jwtSecret: process.env.JWT_SECRET || "supersecret",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
