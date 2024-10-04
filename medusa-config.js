@@ -32,7 +32,7 @@ module.exports = defineConfig({
             id: "local",
             options: {
               upload_dir: "uploads",
-              backend_url: 'https://grocer.al-mizan.store',
+              backend_url: 'http://203.161.43.125:9006',
             },
           },
         ],
