@@ -10,7 +10,7 @@ module.exports = defineConfig({
       adminCors: "*", // Allow all origins
       authCors: "*",  // Allow all origins
       host: '0.0.0.0', // Bind to all interfaces
-      port: 9006, // Ensure this is a number
+      port: 9000, // Ensure this is a number
       jwtSecret: process.env.JWT_SECRET || "supersecret",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
