@@ -41,12 +41,12 @@ module.exports = defineConfig({
             id: "s3",
 
             options: {
-              file_url: process.env.S3_FILE_URL || "http://pizza.al-mizan.store", // Use your domain name
-              access_key_id: process.env.S3_ACCESS_KEY_ID || "minioadmin", // Replace with your MinIO access key
-              secret_access_key: process.env.S3_SECRET_ACCESS_KEY || "minioadmin", // Replace with your MinIO secret key
-              region: process.env.S3_REGION || "us-east-1", // You can set this as needed
-              bucket: process.env.S3_BUCKET || "grocery", // Replace with your bucket name
-              endpoint: process.env.S3_ENDPOINT || "http://pizza.al-mizan.store:9000", // Use your domain name with port
+              file_url: "http://203.161.43.125:9000/grocery", // Use your domain name
+              access_key_id:  "IUebtKcJBIpge7meMsaJ", // Replace with your MinIO access key
+              secret_access_key: "E3KrCb4BrC30dc9I5sDTgz0UH4mMvX02odlDt63F", // Replace with your MinIO secret key
+              region: "us-east-1", // You can set this as needed
+              bucket: "grocery", // Replace with your bucket name
+              endpoint:  "http://203.161.43.125:9000", // Use your domain name with port
               // other options...
             },
           },
@@ -59,3 +59,6 @@ module.exports = defineConfig({
 
   },
 });
+
+
+
