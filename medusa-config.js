@@ -23,20 +23,39 @@ module.exports = defineConfig({
 
   },
   modules: {
+
+    // ...
+
     [Modules.FILE]: {
-      resolve: "@medusajs/file",
+
+      resolve: "@medusajs/medusa/file",
+
       options: {
+
         providers: [
+
           {
-            resolve: "@medusajs/file-local-next",
-            id: "local",
+
+            resolve: "@medusajs/medusa/file-s3",
+
+            id: "s3",
+
             options: {
-              upload_dir: "uploads",
-              backend_url: 'http://203.161.43.125:9006',
+              file_url: process.env.S3_FILE_URL || "http://pizza.al-mizan.store", // Use your domain name
+              access_key_id: process.env.S3_ACCESS_KEY_ID || "minioadmin", // Replace with your MinIO access key
+              secret_access_key: process.env.S3_SECRET_ACCESS_KEY || "minioadmin", // Replace with your MinIO secret key
+              region: process.env.S3_REGION || "us-east-1", // You can set this as needed
+              bucket: process.env.S3_BUCKET || "grocery", // Replace with your bucket name
+              endpoint: process.env.S3_ENDPOINT || "http://pizza.al-mizan.store:9000", // Use your domain name with port
+              // other options...
             },
           },
+
         ],
+
       },
+
     },
+
   },
 });
